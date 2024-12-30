@@ -52,7 +52,7 @@ const HomePage = () => {
   if (loading) {
     return (
       <View style={styles.loader}>
-        <ActivityIndicator size="large" color="#0000ff" />
+        <ActivityIndicator size="large" color="#0097b2" />
       </View>
     );
   }
@@ -67,7 +67,9 @@ const HomePage = () => {
 
         <View style={{}}>
           <Text style={styles.textMain}>Hello, {username}</Text>
-          {/* <Text style={styles.textSec}>Welc</Text> */}
+        </View>
+        <View style={{ justifyContent:"center", alignItems:"center", }}>
+            <Text style={styles.textSec}>Here are some Cricket teams for you....</Text>
         </View>
       </View>
       {data.length === 0 ? (
@@ -89,8 +91,8 @@ const HomePage = () => {
       <View 
         style={{ 
           position: 'absolute', 
-          bottom: 10, right: 10, 
-          backgroundColor: '#000000', 
+          bottom: 15, right: 17, 
+          backgroundColor: '#ff6f61', 
           padding: 5, borderRadius: 10, 
           paddingHorizontal: 20}}
       >
@@ -109,7 +111,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },  
   header: {
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -119,17 +121,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    height: 60,
-    width: 60,
-    margin:20,
+    height: 80,
+    width: 80,
+    margin:0,
     borderRadius: 10,
-  },  textMain:{
+  },  
+  textMain:{
     fontSize: 30,
+    color: "#0097b2",
     marginBottom: 5,
     fontWeight: "bold",
   },
   textSec:{
     fontSize: 20,
+    color: "#a6cfd3",
+    margin:10
   },
   floating:{
     fontSize: 30,
